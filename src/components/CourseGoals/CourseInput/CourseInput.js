@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-import Button from "../../UI/Button";
+import Button from "../../UI/Button/Button";
 import styles from "./CourseInput.module.css";
 
 const CourseInput = (props) => {
-  const [enterdValue, setEnteredValue] = useState("");
+  const [enteredValue, setEnteredValue] = useState("");
   const [isValid, setIsValid] = useState(true);
 
   const goalInputChangeHandler = (event) => {
@@ -16,11 +16,11 @@ const CourseInput = (props) => {
 
   const formSubmitHandler = (event) => {
     event.preventDefault();
-    if (enterdValue.trim().length === 0) {
+    if (enteredValue.trim().length === 0) {
       setIsValid(false);
       return;
     }
-    props.onAddGoal(enterdValue);
+    props.onAddGoal(enteredValue);
   };
 
   return (

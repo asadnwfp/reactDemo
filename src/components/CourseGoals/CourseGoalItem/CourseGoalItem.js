@@ -2,7 +2,6 @@ import React from "react";
 import "./CourseGoalItem.css";
 
 const CourseGoalItem = (props) => {
-  console.log("Props: ", props);
   const deleteHandler = () => {
     props.onDelete(props.id);
   };
