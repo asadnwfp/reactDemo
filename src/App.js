@@ -34,6 +34,7 @@ function App() {
       <CourseGoalsList items={courseGoals} onDeleteItem={deleteItemHandler} />
     );
   }
+  console.log("Content", content);
   return (
     <div>
       <section id="goal-form">
